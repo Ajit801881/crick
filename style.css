@@ -1,0 +1,1057 @@
+*{
+
+ margin:0;
+
+ padding:0;
+
+ box-sizing:border-box;
+
+ font-family:Arial, sans-serif;
+
+}
+
+
+
+body{
+
+ background:
+
+ linear-gradient(rgba(13,27,76,.85),rgba(13,27,76,.85)),
+
+ url("Babamani.jpeg") center/cover no-repeat fixed;
+
+ color:white;
+
+}
+
+/* TOP BAR */
+.top-bar { background:#06153c; padding:5px 15px; font-size:11px; border-bottom:1px solid rgba(255,255,255,0.1); }
+.top-container { max-width:1200px; margin:0 auto; display:flex; justify-content:space-between; }
+.top-right { display:flex; gap:10px; align-items:center; }
+
+/* HEADER FIX */
+.main-header {
+    background:#19398a;
+    padding:10px 15px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    border-bottom:3px solid #ffd700;
+}
+
+.nav-container {
+    max-width:1200px;
+    margin:0 auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+/* LOGO SIZE FIX */
+.logo-area { display:flex; align-items:center; gap:8px; }
+
+.bpl-logo-img {
+    height: 55px; /* Desktop Size */
+    width: auto;
+    border-radius: 4px;
+    object-fit: contain;
+}
+
+.logo-text { display:flex; flex-direction:column; line-height:1; }
+.b-text { font-weight:900; font-size:18px; color:white; }
+.p-text { font-weight:bold; font-size:9px; color:#ffd700; }
+
+.main-nav { display:flex; gap:15px; }
+.main-nav a {
+    color:white; text-decoration:none; font-weight:bold; font-size:13px;
+    padding:5px 0; border-bottom:3px solid transparent;
+}
+.main-nav a.active { color:#ffd700; border-bottom:3px solid #ffd700; }
+
+/* INFO CARDS */
+.info { display:flex; justify-content:center; gap:15px; padding:20px; flex-wrap:wrap; }
+.card { background:white; color:#0d1b4c; padding:15px; border-radius:12px; width:250px; text-align:center; font-weight:bold; }
+
+/* SPONSORSHIP */
+.sponsorship { padding:30px 15px; text-align:center; }
+.sponsor-container { display:flex; flex-wrap:wrap; justify-content:center; gap:20px; margin-top:20px; }
+.sponsor-video-box, .sponsor-photo-box { 
+    max-width:320px; width:100%; border-radius:15px; overflow:hidden; border:2px solid #ffd700; 
+}
+.sponsor-video-box video, .sponsor-photo-box img { width:100%; display:block; }
+.sponsor-photo-box { background:white; color:#0d1b4c; padding:10px; }
+
+footer { text-align:center; padding:20px; font-size:12px; }
+
+/* ================= MOBILE VIEW LOGO FIX ================= */
+@media (max-width: 600px) {
+    .bpl-logo-img {
+        height: 35px; /* Mobile par logo chota ho jayega */
+    }
+    
+    .logo-text {
+        display: none; /* Mobile par sirf logo icon dikhega space bachane ke liye */
+    }
+
+    .main-nav {
+        gap: 8px;
+    }
+
+    .main-nav a {
+        font-size: 10px;
+    }
+
+    .hero h1 { font-size: 24px; }
+}
+
+
+
+/* ================= HEADER ================= */
+
+.header{
+
+ display:flex;
+
+ justify-content:space-between;
+
+ align-items:center;
+
+ padding:15px 20px;
+
+ background:#0d1b4c;
+
+ flex-wrap:wrap;
+
+}
+
+
+
+nav{
+
+ display:flex;
+
+ gap:15px;
+
+}
+
+
+
+nav a{
+
+ color:white;
+
+ text-decoration:none;
+
+ font-size:15px;
+
+}
+
+
+
+nav a.active,
+
+nav a:hover{
+
+ color:#ffd700;
+
+}
+
+
+
+/* ================= HERO ================= */
+
+.hero{
+
+ text-align:center;
+
+ padding:60px 20px;
+
+}
+
+
+
+.hero h1{
+
+ font-size:36px;
+
+ color:#ffd700;
+
+}
+
+
+
+.hero p{
+
+ font-size:16px;
+
+ margin-top:8px;
+
+ opacity:.9;
+
+}
+
+
+
+/* ================= INFO ================= */
+
+.info{
+
+ display:flex;
+
+ justify-content:center;
+
+ gap:20px;
+
+ padding:20px;
+
+ flex-wrap:wrap;
+
+}
+
+
+
+.card{
+
+ background:white;
+
+ color:#0d1b4c;
+
+ padding:20px;
+
+ border-radius:14px;
+
+ width:260px;
+
+ animation:fade .6s;
+
+ box-shadow:0 8px 20px rgba(0,0,0,.2);
+
+}
+
+
+
+/* ================= PAGE ================= */
+
+.page{
+
+ padding:30px 20px;
+
+ text-align:center;
+
+ max-width:1000px;
+
+ margin:auto;
+
+}
+
+
+
+.page h2{
+
+ color:#ffd700;
+
+ margin-bottom:15px;
+
+}
+
+
+
+/* ================= MATCH ================= */
+
+/* .match{
+
+ background:white;
+
+ color:#0d1b4c;
+
+ padding:15px;
+
+ margin:12px auto;
+
+ max-width:420px;
+
+ border-radius:12px;
+
+ font-weight:600;
+
+} */
+
+
+
+/* ===== MATCH SECTION ===== */
+
+.match-section{
+
+  padding:40px 15px;
+
+  max-width:1100px;
+
+  margin:auto;
+
+}
+
+
+
+.section-title{
+
+  text-align:center;
+
+  font-size:32px;
+
+  margin-bottom:30px;
+
+  color:#ffd700;
+
+}
+
+
+
+/* ===== DAY FRAME ===== */
+
+.day-card{
+
+  background:rgba(255,255,255,0.08);
+
+  border:1px solid rgba(255,255,255,0.15);
+
+  backdrop-filter:blur(8px);
+
+  border-radius:18px;
+
+  padding:25px;
+
+  margin-bottom:30px;
+
+  animation:slideUp .8s ease;
+
+}
+
+
+
+/* Playoff Highlight */
+
+.day-card.playoff{
+
+  border:2px solid #ffd700;
+
+  box-shadow:0 0 25px rgba(255,215,0,.4);
+
+}
+
+
+
+/* ===== DATE TITLE ===== */
+
+.day-title{
+
+  text-align:center;
+
+  font-size:22px;
+
+  margin-bottom:20px;
+
+  color:#ffd700;
+
+}
+
+
+
+/* ===== MATCH ROW ===== */
+
+.match-row{
+
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+
+  padding:14px 16px;
+
+  margin-bottom:12px;
+
+  background:white;
+
+  color:#0d1b4c;
+
+  border-radius:12px;
+
+  font-weight:bold;
+
+  animation:fadeIn .6s ease forwards;
+
+}
+
+
+
+.match-row span:last-child{
+
+  text-align:right;
+
+}
+
+
+
+/* Hover effect (Laptop) */
+
+@media(min-width:768px){
+
+  .match-row:hover{
+
+    transform:scale(1.03);
+
+    box-shadow:0 12px 25px rgba(0,0,0,.25);
+
+    transition:.3s;
+
+  }
+
+}
+
+
+
+/* ===== MOBILE PERFECT VIEW ===== */
+
+@media(max-width:600px){
+
+  .match-row{
+
+    flex-direction:column;
+
+    gap:6px;
+
+    text-align:center;
+
+    font-size:15px;
+
+  }
+
+
+
+  .day-title{
+
+    font-size:20px;
+
+  }
+
+
+
+  .section-title{
+
+    font-size:26px;
+
+  }
+
+}
+
+
+
+/* ===== ANIMATIONS ===== */
+
+@keyframes slideUp{
+
+  from{
+
+    opacity:0;
+
+    transform:translateY(30px);
+
+  }
+
+  to{
+
+    opacity:1;
+
+    transform:none;
+
+  }
+
+}
+
+
+
+@keyframes fadeIn{
+
+  from{
+
+    opacity:0;
+
+    transform:translateY(10px);
+
+  }
+
+  to{
+
+    opacity:1;
+
+    transform:none;
+
+  }
+
+}
+
+
+
+
+
+/* ================= TEAMS ================= */
+
+/* .team-list{
+
+ display:grid;
+
+ grid-template-columns:repeat(3,1fr);
+
+ gap:15px;
+
+}
+
+
+
+.team-list li{
+
+ background:white;
+
+ color:#0d1b4c;
+
+ padding:14px;
+
+ border-radius:12px;
+
+ font-weight:600;
+
+ list-style:none;
+
+} */  
+
+
+
+*{
+
+ margin:0;
+
+ padding:0;
+
+ box-sizing:border-box;
+
+ font-family:Arial, Helvetica, sans-serif;
+
+}
+
+
+
+body{
+
+ background:linear-gradient(rgba(13,27,76,.85),rgba(13,27,76,.85)),
+
+ url("Babamani.jpeg") center/cover no-repeat fixed;
+
+ color:white;
+
+}
+
+
+
+/* HEADER */
+
+.header{
+
+ display:flex;
+
+ justify-content:space-between;
+
+ align-items:center;
+
+ padding:15px;
+
+ background:#0d1b4c;
+
+ flex-wrap:wrap;
+
+}
+
+
+
+.logo{
+
+ font-size:22px;
+
+ font-weight:bold;
+
+ color:#ffd700;
+
+}
+
+
+
+nav a{
+
+ color:white;
+
+ margin:0 10px;
+
+ text-decoration:none;
+
+}
+
+
+
+nav a.active{
+
+ color:#ffd700;
+
+}
+
+
+
+/* PAGE */
+
+.page{
+
+ padding:40px 15px;
+
+ text-align:center;
+
+ animation:fade .6s;
+
+}
+
+
+
+.title{
+
+ font-size:32px;
+
+ margin-bottom:30px;
+
+ color:#ffd700;
+
+}
+
+
+
+/* TEAM LIST */
+
+.team-list{
+
+ list-style:none;
+
+ max-width:400px;
+
+ margin:auto;
+
+}
+
+
+
+.team-list li{
+
+ background:white;
+
+ color:#0d1b4c;
+
+ padding:16px;
+
+ margin:15px 0;
+
+ border-radius:14px;
+
+ font-size:18px;
+
+ font-weight:bold;
+
+ cursor:pointer;
+
+ animation:slideUp .5s;
+
+}
+
+
+
+.team-list li:hover{
+
+ transform:scale(1.05);
+
+ box-shadow:0 12px 25px rgba(0,0,0,.3);
+
+ transition:.3s;
+
+}
+
+
+
+/* PLAYER MODAL */
+
+.player-modal{
+
+ position:fixed;
+
+ top:0;
+
+ left:0;
+
+ width:100%;
+
+ height:100%;
+
+ background:rgba(0,0,0,.7);
+
+ display:none;
+
+ justify-content:center;
+
+ align-items:center;
+
+ z-index:999;
+
+}
+
+
+
+.player-box{
+
+ background:white;
+
+ color:#0d1b4c;
+
+ width:90%;
+
+ max-width:350px;
+
+ padding:25px;
+
+ border-radius:20px;
+
+ text-align:center;
+
+ animation:zoom .4s;
+
+}
+
+
+
+.player-box h3{
+
+ margin-bottom:15px;
+
+ color:#1f3c88;
+
+}
+
+
+
+.player-box ul{
+
+ list-style:none;
+
+}
+
+
+
+.player-box li{
+
+ padding:10px;
+
+ border-bottom:1px solid #ddd;
+
+ font-weight:bold;
+
+ animation:fade .4s;
+
+}
+
+
+
+.player-box button{
+
+ margin-top:15px;
+
+ padding:10px 20px;
+
+ border:none;
+
+ background:#1f3c88;
+
+ color:white;
+
+ border-radius:20px;
+
+ cursor:pointer;
+
+}
+
+
+
+/* MOBILE FIX */
+
+@media(max-width:600px){
+
+ .title{font-size:26px;}
+
+ .team-list li{font-size:16px;}
+
+}
+
+
+
+/* ANIMATIONS */
+
+@keyframes fade{
+
+ from{opacity:0}
+
+ to{opacity:1}
+
+}
+
+
+
+@keyframes slideUp{
+
+ from{opacity:0;transform:translateY(20px)}
+
+ to{opacity:1;transform:none}
+
+}
+
+
+
+@keyframes zoom{
+
+ from{transform:scale(.7);opacity:0}
+
+ to{transform:scale(1);opacity:1}
+
+}
+
+
+
+
+
+/* ================= TABLE ================= */
+
+table{
+
+ width:100%;
+
+ max-width:600px;
+
+ margin:auto;
+
+ background:white;
+
+ color:#0d1b4c;
+
+ border-collapse:collapse;
+
+ border-radius:12px;
+
+ overflow:hidden;
+
+}
+
+
+
+th,td{
+
+ padding:12px;
+
+ border-bottom:1px solid #ddd;
+
+}
+
+
+
+th{
+
+ background:#0d1b4c;
+
+ color:#ffd700;
+
+}
+
+
+
+/* ================= FOOTER ================= */
+
+footer{
+
+ text-align:center;
+
+ padding:15px;
+
+ font-size:13px;
+
+ opacity:.85;
+
+}
+
+
+
+/* ================= MOBILE RESPONSIVE FIX ================= */
+
+@media(max-width:768px){
+
+
+
+ .hero h1{
+
+   font-size:24px;
+
+ }
+
+
+
+ nav{
+
+   width:100%;
+
+   justify-content:center;
+
+   margin-top:10px;
+
+   flex-wrap:wrap;
+
+ }
+
+
+
+ .info{
+
+   flex-direction:column;
+
+   align-items:center;
+
+ }
+
+
+
+ .card{
+
+   width:100%;
+
+   max-width:320px;
+
+ }
+
+
+
+ .team-list{
+
+   grid-template-columns:1fr;
+
+ }
+
+
+
+ .match{
+
+   max-width:100%;
+
+ }
+
+
+
+ table{
+
+   font-size:14px;
+
+ }
+
+}
+
+
+
+/* ================= ANIMATION ================= */
+
+@keyframes fade{
+
+ from{opacity:0;transform:translateY(15px)}
+
+ to{opacity:1;transform:none}
+
+}
+/* Sponsorship Section Styles */
+.sponsorship {
+    padding: 40px 20px;
+    background: #0d1b4c; /* Deep Blue background */
+    text-align: center;
+    color: white;
+}
+
+.section-title {
+    color: #ffd700; /* Golden Color */
+    font-size: 24px;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+}
+
+.sponsor-container {
+    display: flex;
+    flex-direction: column; /* Mobile mein upar niche dikhega */
+    gap: 20px;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Video Box Style */
+.sponsor-video-box {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 3px solid #ffd700;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+.sponsor-video-box video {
+    width: 100%;
+    display: block;
+}
+
+.badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: red;
+    padding: 2px 8px;
+    font-size: 10px;
+    font-weight: bold;
+    border-radius: 3px;
+}
+
+/* Photo Box Style */
+.sponsor-photo-box {
+    width: 100%;
+    max-width: 400px;
+    background: white;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.sponsor-photo-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.sponsor-photo-box p {
+    color: #0d1b4c;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Responsive: Desktop mein side-by-side dikhega */
+@media (min-width: 768px) {
+    .sponsor-container {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+
+   
+
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BPL | Player List</title>
+    <style>
+        /* CSS isi file mein hai taaki error na aaye */
+        body {
+            background: linear-gradient(rgba(13, 27, 76, 0.9), rgba(13, 27, 76, 0.9)), url("BPL.jpeg") center/cover no-repeat fixed;
+            font-family: 'Segoe UI', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .player-box {
+            background: white;
+            width: 90%;
+            max-width: 400px;
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+            animation: zoomIn 0.4s ease;
+        }
+
+        @keyframes zoomIn {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        h3 { color: #0d1b4c; font-size: 26px; margin-bottom: 20px; border-bottom: 3px solid #ffd700; padding-bottom: 10px; }
+
+        ul { list-style: none; padding: 0; margin: 0; text-align: left; max-height: 400px; overflow-y: auto; }
+
+        li {
+            padding: 12px;
+            border-bottom: 1px solid #eee;
+            font-weight: bold;
+            color: #1f3c88;
+            font-size: 17px;
+        }
+
+        li:nth-child(even) { background: #f9f9f9; }
+
+        .back-btn {
+            margin-top: 25px;
+            padding: 12px 30px;
+            background: #1f3c88;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 16px;
+            transition: 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .back-btn:hover { background: #ffd700; color: #0d1b4c; }
+    </style>
+</head>
+<body>
+
+    <div class="player-box">
+        <h3 id="teamHeading">Loading...</h3>
+        <ul id="playerList">
+            </ul>
+        <a href="teams.html" class="back-btn">← Back to Teams</a>
+    </div>
+
+    <script>
+        // Players ka data (Isi file mein rakha hai taaki asani ho)
+        const allSquads = {
+            rahul: ["Rahul (Captain)", "R. player 2", "R. Player 3", "R. Player 4", "R. Player 5", "R. Player 6", "R. Player 7", "R. Player 8", "R. Player 9", "R. Player 10", "R. Player 11", "R. Player 12", "R. Player 13", "R. Player 14", "R. Player 15"],
+            bapu: ["Bapu (Captain)", "B. Player 2", "B. Player 3", "B. Player 4", "B. Player 5", "B. Player 6", "B. Player 7", "B. Player 8", "B. Player 9", "B. Player 10", "B. Player 11", "B. Player 12", "B. Player 13", "B. Player 14", "B. Player 15"],
+            susanta: ["Susanta (Captain)", "S. Player 2", "S. Player 3", "S. Player 4", "S. Player 5", "S. Player 6", "S. Player 7", "S. Player 8", "S. Player 9", "S. Player 10", "S. Player 11", "S. Player 12", "S. Player 13", "S. Player 14", "S. Player 15"],
+            babula: ["Babula (Captain)", "Ba. Player 2", "Ba. Player 3", "Ba. Player 4", "Ba. Player 5", "Ba. Player 6", "Ba. Player 7", "Ba. Player 8", "Ba. Player 9", "Ba. Player 10", "Ba. Player 11", "Ba. Player 12", "Ba. Player 13", "Ba. Player 14", "Ba. Player 15"],
+            tapan: ["Tapan (Captain)", "T. Player 2", "T. Player 3", "T. Player 4", "T. Player 5", "T. Player 6", "T. Player 7", "T. Player 8", "T. Player 9", "T. Player 10", "T. Player 11", "T. Player 12", "T. Player 13", "T. Player 14", "T. Player 15"]
+        };
+
+        // URL se check karna kaunsi team hai
+        window.onload = function() {
+            const params = new URLSearchParams(window.location.search);
+            const teamKey = params.get('team'); 
+
+            if (teamKey && allSquads[teamKey]) {
+                document.getElementById("teamHeading").innerText = teamKey.toUpperCase() + " 11 SQUAD";
+                const list = document.getElementById("playerList");
+                list.innerHTML = "";
+                
+                allSquads[teamKey].forEach(p => {
+                    const li = document.createElement("li");
+                    li.innerText = p;
+                    list.appendChild(li);
+                });
+            } else {
+                document.getElementById("teamHeading").innerText = "Team Not Found!";
+            }
+        }
+    </script>
+</body>
+</html>
