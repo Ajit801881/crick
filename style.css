@@ -830,7 +830,7 @@ nav a.active{
 
 /* ================= TABLE ================= */
 
-table{
+ table{
 
  width:100%;
 
@@ -868,7 +868,43 @@ th{
 
  color:#ffd700;
 
+} 
+
+
+/* Make the container responsive */
+ .table-container {
+    width: 90%;            /* Adjust width as needed */
+    margin: 20px auto;    /* Centers the table on the page */
+    overflow-x: auto;     /* Adds scrollbar on small mobile screens */
 }
+
+/* Make the table stretch */
+table {
+    width: 100%;           /* This makes the table full-sized */
+    border-collapse: collapse; 
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Adds a nice depth */
+}
+
+/* Style the headers and cells */
+th, td {
+    padding: 15px;         /* This increases the height/size of rows */
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Style the header row */
+th {
+    background-color: #333; /* Dark header like most sports sites */
+    color: white;
+    text-transform: uppercase;
+}
+
+/* Zebra stripes for better readability */
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+} 
 
 
 
@@ -1050,6 +1086,88 @@ footer{
         flex-direction: row;
         justify-content: center;
     }
+
+    /* --- Running Marquee Style --- */
+.ticker-container {
+    width: 100%;
+    background: #ef008c; /* WPL style pink/purple */
+    color: white;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 10px 0;
+    font-weight: bold;
+    font-family: 'Arial', sans-serif;
+    border-bottom: 2px solid #ffd700;
+}
+
+.ticker-text {
+    display: inline-block;
+    padding-left: 100%;
+    animation: scroll-text 20s linear infinite;
+}
+
+.ticker-text span {
+    padding-right: 50px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Animation Logic */
+@keyframes scroll-text {
+    from { transform: translateX(0); }
+    to { transform: translateX(-100%); }
+}
+
+/* Pause on hover so people can read */
+.ticker-container:hover .ticker-text {
+    animation-play-state: paused;
+}
+
+/* --- BPL MOBILE FRIENDLY TICKER --- */
+.bpl-ticker-box {
+    width: 100%;
+    background: #ef008c; /* Pink Color */
+    color: white;
+    overflow: hidden;
+    padding: 12px 0;
+    position: relative;
+    display: flex;
+    border-bottom: 2px solid #ffd700;
+}
+
+.bpl-ticker-track {
+    display: flex;
+    width: max-content; /* Important for Mobile */
+    animation: scroll-mobile 30s linear infinite;
+}
+
+.bpl-ticker-track span {
+    padding: 0 40px;
+    font-size: 14px;
+    font-weight: bold;
+    white-space: nowrap;
+    text-transform: uppercase;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Keyframes for smooth movement */
+@keyframes scroll-mobile {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Mobile responsive font size */
+@media (max-width: 600px) {
+    .bpl-ticker-track span {
+        font-size: 12px;
+        padding: 0 25px;
+    }
+}
 
 
    
