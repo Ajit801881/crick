@@ -2,9 +2,72 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>BABAMANI PREMIER LEAGUE</title>
+    <title>BABAMANI PREMIER LEAGUE 2026</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <link rel="stylesheet" href="style.css">
+    <style>
+        /* === INTERNAL CSS (Ab connection nahi tootega) === */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Arial, sans-serif; }
+
+        body {
+            background: linear-gradient(rgba(13, 27, 76, 0.9), rgba(13, 27, 76, 0.9)),
+            url("Babamani.jpeg") center/cover no-repeat fixed;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        .top-bar { background: #06153c; padding: 8px 15px; font-size: 12px; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .top-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; }
+        .top-right a { color: white; text-decoration: none; margin-left: 10px; font-size: 16px; }
+
+        .main-header {
+            background: #19398a;
+            padding: 10px 15px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 3px solid #ffd700;
+        }
+        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .logo-area { display: flex; align-items: center; gap: 10px; }
+        .bpl-logo-img { height: 50px; border-radius: 5px; }
+        .logo-text { display: flex; flex-direction: column; line-height: 1.1; }
+        .b-text { font-weight: 900; font-size: 18px; color: white; }
+        .p-text { font-weight: bold; font-size: 10px; color: #ffd700; }
+
+        .main-nav { display: flex; gap: 15px; }
+        .main-nav a { color: white; text-decoration: none; font-weight: bold; font-size: 13px; padding-bottom: 5px; }
+        .main-nav a.active { color: #ffd700; border-bottom: 2px solid #ffd700; }
+
+        /* TICKER FIX */
+        .bpl-ticker-container {
+            width: 100%;
+            background: linear-gradient(90deg, #ef008c 0%, #743481 100%);
+            padding: 12px 0;
+            border-bottom: 2px solid #ffd700;
+        }
+
+        /* HERO & CARDS */
+        .hero { text-align: center; padding: 50px 20px; }
+        .hero h1 { font-size: 32px; color: #ffd700; }
+        .info { display: flex; justify-content: center; gap: 15px; padding: 20px; flex-wrap: wrap; }
+        .card { background: white; color: #0d1b4c; padding: 20px; border-radius: 12px; width: 280px; text-align: center; font-weight: bold; }
+
+        /* SPONSORSHIP */
+        .sponsorship { padding: 40px 20px; text-align: center; }
+        .sponsor-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
+        .sponsor-video-box, .sponsor-photo-box { max-width: 350px; width: 100%; border-radius: 15px; overflow: hidden; border: 3px solid #ffd700; position: relative; }
+        .sponsor-photo-box { background: white; color: #0d1b4c; padding: 10px; }
+        .sponsor-video-box video, .sponsor-photo-box img { width: 100%; display: block; }
+        .badge { position: absolute; top: 10px; left: 10px; background: red; color: white; padding: 3px 8px; font-size: 10px; font-weight: bold; border-radius: 3px; z-index: 10; }
+
+        footer { text-align: center; padding: 30px; font-size: 12px; opacity: 0.7; }
+
+        @media (max-width: 600px) {
+            .logo-text { display: none; }
+            .main-nav { gap: 8px; }
+            .main-nav a { font-size: 11px; }
+        }
+    </style>
 </head>
 
 <body>
@@ -13,7 +76,6 @@
     <div class="top-container">
         <div class="top-left">BPL.TV</div>
         <div class="top-right">
-            <span>Follow Us</span>
             <a href="#">𝕏</a> <a href="#">📸</a> <a href="#">ⓕ</a>
         </div>
     </div>
@@ -28,29 +90,24 @@
                 <span class="p-text">PREMIER LEAGUE</span>
             </div>
         </div>
-        
         <nav class="main-nav">
             <a href="index.html" class="active">HOME</a>
             <a href="matches.html">MATCHES</a>
-            <a href="points.html">POINTS TABLE</a>
+            <a href="points.html">POINTS</a>
             <a href="teams.html">TEAMS</a>
+            <a href="admin.html">ADMIN</a>
         </nav>
     </div>
 </header>
 
 <div class="bpl-ticker-container">
-    <div class="bpl-ticker-wrapper">
-        <div class="bpl-ticker-item">
-            <span>🏏 6 OVER PER MATCH WITH RED TENNIS BALL</span>
-            <span>🏆 WELCOME TO BABAMANI PREMIER LEAGUE 2026</span>
-            <span>🔥 BALANGA COUNCIL GRASSROOTS CRICKET CARNIVAL</span>
-            <span>📍 JANHIA CRICKET GROUND, SORO</span>
-            <span>🏏 6 OVER PER MATCH WITH RED TENNIS BALL</span>
-            <span>🏆 WELCOME TO BABAMANI PREMIER LEAGUE 2026</span>
-            <span>🔥 BALANGA COUNCIL GRASSROOTS CRICKET CARNIVAL</span>
-            <span>📍 JANHIA CRICKET GROUND, SORO</span>
-        </div>
-    </div>
+    <marquee behavior="scroll" direction="left" scrollamount="7" style="color: white; font-weight: bold; font-size: 14px; text-transform: uppercase;">
+        
+        🏆 WELCOME TO BABAMANI PREMIER LEAGUE 2026 &nbsp;&nbsp;&nbsp;&nbsp; 
+        🏏 6 OVER PER MATCH WITH RED TENNIS BALL &nbsp;&nbsp;&nbsp;&nbsp; 
+        🔥 BALANGA COUNCIL GRASSROOTS CRICKET CARNIVAL &nbsp;&nbsp;&nbsp;&nbsp; 
+        📍 JANHIA CRICKET GROUND, SORO
+    </marquee>
 </div>
 
 <section class="hero">
@@ -62,11 +119,10 @@
     <div class="card">🏏 5 Teams</div>
     <div class="card">📅 League + Playoff</div>
     <div class="card">📍 Janhia Cricket Ground, Soro</div>
-    <div class="card">6 OVERS</div>
 </section>
 
 <section class="sponsorship">
-    <h2 class="section-title">OFFICIAL SPONSOR</h2>
+    <h2 style="color:#ffd700; margin-bottom:20px;">OFFICIAL SPONSOR</h2>
     <div class="sponsor-container">
         <div class="sponsor-video-box">
             <video autoplay muted loop playsinline>
