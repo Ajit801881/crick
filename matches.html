@@ -1,37 +1,38 @@
+
 <!DOCTYPE html>
 <html>
 <head>
-<title>BPL Matches</title>
-<link rel="stylesheet" href="style.css">
+    <title>BPL Matches - Schedule</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Arial, sans-serif; }
+        body { background: linear-gradient(rgba(13, 27, 76, 0.9), rgba(13, 27, 76, 0.9)), url("Babamani.jpeg") center/cover no-repeat fixed; color: white; text-align: center; }
+        .header { background: #19398a; padding: 15px; border-bottom: 3px solid #ffd700; display: flex; justify-content: space-between; }
+        nav a { color: white; text-decoration: none; margin: 0 10px; font-weight: bold; font-size: 13px; }
+        nav a.active { color: #ffd700; border-bottom: 2px solid #ffd700; }
+        .match-section { padding: 30px 15px; }
+        .day-card { background: white; color: #0d1b4c; border-radius: 15px; padding: 15px; margin: 20px auto; max-width: 500px; border-left: 6px solid #ef008c; }
+        .day-title { color: #ef008c; margin-bottom: 10px; border-bottom: 1px solid #ddd; padding-bottom: 5px; }
+        .match-row { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px dashed #ccc; font-size: 14px; }
+        .match-row b { color: #19398a; }
+        .playoff { border-left: 6px solid #ffd700; background: #fff9e6; }
+    </style>
 </head>
-
 <body>
+    <header class="header">
+        <div class="logo">🏏 BPL</div>
+        <nav>
+            <a href="index.html">HOME</a>
+            <a class="active" href="matches.html">MATCHES</a>
+            <a href="teams.html">TEAMS</a>
+            <a href="points.html">POINTS</a>
+        </nav>
+    </header>
 
-<header class="header">
-  <div class="logo">🏏 BPL</div>
-  <nav>
-    <a href="index.html">HOME</a>
-    <a class="active" href="matches.html">MATCHES</a>
-    <a href="teams.html">TEAMS</a>
-    <a href="points.html">POINTS TABLE</a>
-  </nav>
-</header>
-
-<!-- <section class="page">
-<h2>Upcoming Matches</h2>
-
-<div class="match">RAHUL 11 <span>VS</span> BAPU 11</div>
-<div class="match">SUSANTA 11 <span>VS</span> BABULA 11</div>
-<div class="match">TAPAN 11 <span>VS</span> RAHUL 11</div>
-<div class="match">BAPU 11 <span>VS</span> SUSANTA 11</div>
-<div class="match">BABULA 11 <span>VS</span> TAPAN 11</div>
-
-</section> -->
-
-<section class="match-section" id="matches">
-  <h2 class="section-title">Match Schedule</h2>
-
-  <!-- 16 FEB -->
+    <section class="match-section">
+        <h2 style="color:#ffd700;">Match Schedule</h2>
+        
+        <!-- 16 FEB -->
   <div class="day-card">
     <h3 class="day-title">📅 16 February 2026</h3>
     <div class="match-row"><span>10:00 AM</span><span>RAHUL 11 <b>VS</b> BAPU 11</span></div>
@@ -77,9 +78,8 @@
     <div class="match-row"><span>11:30 AM</span><span>PLAY-OFF : <b>T2 VS T3</b></span></div>
     <div class="match-row"><span>02:00 PM</span><span>FINAL : <b>T1 VS Winner (T2 vs T3)</b></span></div>
   </div>
-
-</section>
-
-
+    </section>
 </body>
 </html>
+  
+
