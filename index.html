@@ -50,6 +50,36 @@
             z-index: 900;
         }
 
+        /* YOUTUBE CHANNEL LINK SECTION */
+        .youtube-section {
+            background: #000;
+            padding: 12px;
+            text-align: center;
+            border-bottom: 1px solid #333;
+        }
+        .yt-btn {
+            display: inline-flex;
+            align-items: center;
+            background: #ff0000;
+            color: white;
+            text-decoration: none;
+            padding: 10px 25px;
+            border-radius: 50px;
+            font-weight: 900;
+            font-size: 13px;
+            text-transform: uppercase;
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
+            animation: pulse-red 2s infinite;
+            transition: 0.3s;
+        }
+        @keyframes pulse-red {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.7); }
+            70% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(255, 0, 0, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 0, 0, 0); }
+        }
+        .yt-btn:hover { background: #fff; color: #ff0000; }
+        .yt-btn img { width: 22px; margin-right: 10px; }
+
         /* HERO VIDEO SECTION */
         .hero-video-wrapper {
             position: relative;
@@ -78,7 +108,7 @@
         .hero-text-box h1 { font-size: 28px; color: #ffd700; text-shadow: 2px 2px 10px rgba(0,0,0,0.8); font-weight: 900; }
         .hero-text-box p { font-size: 12px; margin-top: 5px; font-weight: bold; }
 
-        /* TEAMS GRID - FULL COVER LOGO FIX */
+        /* TEAMS GRID */
         .teams-grid { 
             display: flex; 
             justify-content: center; 
@@ -100,14 +130,14 @@
             justify-content: center !important;
             overflow: hidden !important; 
             border: 2px solid #ffd700 !important; 
-            padding: 0 !important; /* Gap khatam */
+            padding: 0 !important;
             background: #000;
         }
 
         .badge-circle img { 
             width: 100% !important; 
             height: 100% !important; 
-            object-fit: cover !important; /* Full Cover fix */
+            object-fit: cover !important; 
             display: block !important;
         }
         
@@ -134,8 +164,8 @@
         .sponsor-video-box video, .sponsor-photo-box img { width: 100%; display: block; }
 
         footer { text-align: center; padding: 30px; font-size: 11px; opacity: 0.6; }
+        footer a { color: #ffd700; text-decoration: none; font-weight: bold; }
 
-        /* DESKTOP MEDIA QUERIES */
         @media (min-width: 768px) {
             .hero-video-wrapper { height: 450px; }
             .hero-text-box h1 { font-size: 45px; }
@@ -176,8 +206,15 @@
 
 <div class="bpl-ticker-container">
     <marquee behavior="scroll" direction="left" scrollamount="6" style="color: white; font-weight: bold; font-size: 13px; text-transform: uppercase;">
-        🏆 WELCOME TO BABAMANI PREMIER LEAGUE 2026 &nbsp;&nbsp;&nbsp;&nbsp; 🏏 8 OVER PER MATCH WITH RED TENNIS BALL &nbsp;&nbsp;&nbsp;&nbsp; 🔥 BALANGA COUNCIL GRASSROOTS CRICKET CARNIVAL &nbsp;&nbsp;&nbsp;&nbsp; 📍 JANHIA GROUND, SORO
+        🏆 WELCOME TO BABAMANI PREMIER LEAGUE 2026 &nbsp;&nbsp;&nbsp;&nbsp; 🏏 8 OVER PER MATCH WITH RED TENNIS BALL &nbsp;&nbsp;&nbsp;&nbsp; 🔥 BALANGA COUNCIL GRASSROOTS CRICKET CARNIVAL &nbsp;&nbsp;&nbsp;&nbsp; 📍 JANHIA GROUND, SORO &nbsp;&nbsp;&nbsp;&nbsp; 🎥 LIVE STREAMING ON SS TECK ZONE YOUTUBE CHANNEL
     </marquee>
+</div>
+
+<div class="youtube-section">
+    <a href="https://youtube.com/@ssteckzone3092?si=_Zx4zfEkQRPI5YjP" target="_blank" class="yt-btn">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png" alt="YouTube">
+        Watch Cricket Live: SS TECK ZONE
+    </a>
 </div>
 
 <section class="hero-video-wrapper">
@@ -192,7 +229,6 @@
 <h2 style="text-align: center; color: #ffd700; margin-top: 30px; font-size: 20px;">OFFICIAL TEAMS</h2>
 <section class="teams-grid">
     <div class="team-card"><div class="badge-circle"><img src="logo/pitchpirates.jpeg" onerror="this.src='https://cdn-icons-png.flaticon.com/512/1101/1101680.png'"></div><p>PITCH PIRATES</p></div>
-    <!-- <div class="team-card"><div class="badge-circle"><img src="babula.png" onerror="this.src='https://cdn-icons-png.flaticon.com/512/1101/1101680.png'"></div><p>BABULA 11</p></div> -->
     <div class="team-card"><div class="badge-circle"><img src="logo/Royal.jpeg" onerror="this.src='https://cdn-icons-png.flaticon.com/512/1101/1101680.png'"></div><p> ROYAL BHUTANU</p></div>
     <div class="team-card"><div class="badge-circle"><img src="logo/young.jpeg" onerror="this.src='https://cdn-icons-png.flaticon.com/512/1101/1101680.png'"></div><p>YOUNG STAR 11</p></div>
     <div class="team-card"><div class="badge-circle"><img src="logo/garudaaa.jpeg" onerror="this.src='https://cdn-icons-png.flaticon.com/512/1101/1101680.png'"></div><p>GARUDA 11</p></div>
@@ -234,21 +270,30 @@
 
 <footer>
     <p>© 2026 Babamani Premier League | Designed for BPL Soro</p>
+    <p style="margin-top:5px;">Watch Live on <a href="https://www.youtube.com/@SSTECKZONE" target="_blank">SS TECK ZONE</a></p>
 </footer>
 
 <script>
-    const videos = ["auction1.mp4", "auction2.mp4", "auction3.mp4"];
+    // Auction Video Loop Logic
+    const videos = ["auction/Auction2.mp4", "auction/Auction3.mp4"];
     let videoIndex = 0;
     const player = document.getElementById('auctionSlider');
 
     function playNext() {
-        videoIndex = (videoIndex + 1) % videos.length;
+        videoIndex++;
+        if (videoIndex >= videos.length) {
+            videoIndex = 0;
+        }
         player.src = videos[videoIndex];
-        player.play().catch(e => console.log("Auto-play waiting"));
+        player.load();
+        player.play().catch(e => console.log("Auto-play waiting for user..."));
     }
 
-    player.src = videos[0];
-    player.onended = playNext;
+    // Pehla video load karo
+    player.src = videos[videoIndex];
+
+    // Jab video end ho to next wala chale (Continuous Loop)
+    player.addEventListener('ended', playNext, false);
 </script>
 
 </body>
