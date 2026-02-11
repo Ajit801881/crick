@@ -103,4 +103,58 @@ tr:hover {
     -webkit-text-fill-color: transparent;
     font-size: 1.2rem;
 }
+/* 1. Box ki padding khatam karke border chamkilu karne ke liye */
+.badge-circle {
+    width: 90px; 
+    height: 90px; 
+    border-radius: 12px; 
+    margin: 0 auto 10px;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    overflow: hidden; /* Bahut zaruri: Isse image box ke bahar nahi niklegi */
+    border: 2px solid #ffd700; /* Gold border jo photo mein dikh rahi hai */
+    background: #000; /* Agar image thodi choti ho to piche black background rahega */
+}
+
+/* 2. Logo ko poore box mein fit karne ke liye */
+.badge-circle img { 
+    width: 100% !important;   /* Pura dabba cover karega */
+    height: 100% !important;  /* Pura dabba cover karega */
+    object-fit: cover;        /* ISSE HI FULL COVER HOGA (Instagram ki tarah) */
+    display: block;
+}
+
+/* Teams Grid Setup */
+.teams-grid { 
+    display: flex; 
+    justify-content: center; 
+    flex-wrap: wrap; 
+    gap: 15px; 
+    padding: 20px; 
+}
+
+/* 1. Box ko fix karo */
+.badge-circle {
+    width: 90px !important; 
+    height: 90px !important; 
+    border-radius: 12px !important; 
+    margin: 0 auto 10px !important;
+    display: flex !important; 
+    align-items: center !important; 
+    justify-content: center !important;
+    overflow: hidden !important; /* Isse image bahar nahi jayegi */
+    border: 2px solid #ffd700 !important; 
+    padding: 0 !important; /* ISSE HI COVER HOGA - koi gap nahi bachega */
+    background: #000;
+}
+
+/* 2. Logo ko "FULL COVER" karo */
+.badge-circle img { 
+    width: 100% !important; 
+    height: 100% !important; 
+    object-fit: cover !important; /* Isse photo poore dabe mein fail jayegi */
+    object-position: center;
+    display: block !important;
+}
 }
