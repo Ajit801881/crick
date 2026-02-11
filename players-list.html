@@ -1,3 +1,7 @@
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,12 +36,13 @@
 
         h3 { 
             color: #19398a; 
-            font-size: 24px; 
+            font-size: 22px; 
             margin-bottom: 20px; 
             background: #f0f4ff;
-            padding: 10px;
+            padding: 12px;
             border-radius: 12px;
             letter-spacing: 1px;
+            text-transform: uppercase;
         }
 
         ul { list-style: none; padding: 0; margin: 0; text-align: left; max-height: 450px; overflow-y: auto; }
@@ -51,7 +56,7 @@
             border-bottom: 1px solid #eee;
             font-weight: 600;
             color: #0d1b4c;
-            font-size: 16px;
+            font-size: 15px;
             display: flex;
             align-items: center;
         }
@@ -89,12 +94,20 @@
     </div>
 
     <script>
+        // Sabhi players ke asli naam yahan hain
         const allSquads = {
-            rahul: ["Rahul (Captain)", "R. player 2", "R. Player 3", "R. Player 4", "R. Player 5", "R. Player 6", "R. Player 7", "R. Player 8", "R. Player 9", "R. Player 10", "R. Player 11", "R. Player 12", "R. Player 13", "R. Player 14", "R. Player 15"],
-            bapu: ["Bapu (Captain)", "B. Player 2", "B. Player 3", "B. Player 4", "B. Player 5", "B. Player 6", "B. Player 7", "B. Player 8", "B. Player 9", "B. Player 10", "B. Player 11", "B. Player 12", "B. Player 13", "B. Player 14", "B. Player 15"],
-            susanta: ["Susanta (Captain)", "S. Player 2", "S. Player 3", "S. Player 4", "S. Player 5", "S. Player 6", "S. Player 7", "S. Player 8", "S. Player 9", "S. Player 10", "S. Player 11", "S. Player 12", "S. Player 13", "S. Player 14", "S. Player 15"],
-            babula: ["Babula (Captain)", "Ba. Player 2", "Ba. Player 3", "Ba. Player 4", "Ba. Player 5", "Ba. Player 6", "Ba. Player 7", "Ba. Player 8", "Ba. Player 9", "Ba. Player 10", "Ba. Player 11", "Ba. Player 12", "Ba. Player 13", "Ba. Player 14", "Ba. Player 15"],
-            tapan: ["Tapan (Captain)", "T. Player 2", "T. Player 3", "T. Player 4", "T. Player 5", "T. Player 6", "T. Player 7", "T. Player 8", "T. Player 9", "T. Player 10", "T. Player 11", "T. Player 12", "T. Player 13", "T. Player 14", "T. Player 15"]
+            rahul: ["Rahul (Captain)", "Bhabani sankar das", "Romeo", "Gagan Biswal", "Babaji", "Manas Behera", "Ksihyamanda Mahal", "Bhagaban Das", "Rakesh Nayak", "Gouranga Jena", "Firoz Sahu", "Jitu", "Narayan Jena", "Satyabrata Khilar", "Rudra prakash Rout", "Malay Biswal"],
+            bapu: ["Bapu (Captain)", "Subhasish Rout", "Jagat jeeban Panda", "Jiban Das", "Sujit Jena", "Sahil", "Soumya Das", "Mona Ranjan Biswal(*)", "Sabyasachi Das", "Deepak Biswal", "Tapas Barik", "Toffic", "Ajay Biswal", "Harkat", "Omm Pati", "Biren Behera"],
+            susanta: ["Babula (Captain)", "Soumyajit Pradhan", "Jayanta Jena", "Sumit Biswal", "Ajit Nath", "Ruturaj Jena", "Juned", "Sanjay Sahu", "Rajendra Pakal", "Sanjay Jena", "Biswajit", "SUbhankar Rana", "Antaryami Biswal", "Biren Behera"],
+            tapan: ["Tapan (Captain)", "Abhinash Palei", "Sanjay Behera", "Mazbur", "Himanshu Biswal", "deelip Biswal", "Amit Biswal", "Prakash Puhan", "Lipu Rout", "Hemant Jena", "Dinesh Mallick", "Chandan Hansoda", "Sagar Biswal", "Prakash Mallick", "Jyotirmaya Sahu", "Akash Puhan"]
+        };
+
+        // Team key ko asli Team Name se map karne ke liye
+        const teamNameMap = {
+            rahul: "GARUDA 11",
+            bapu: "PITCH PIRATES",
+            susanta: "YOUNG STAR 11",
+            tapan: "ROYAL BHUTANU"
         };
 
         window.onload = function() {
@@ -102,20 +115,23 @@
             const teamKey = params.get('team'); 
 
             if (teamKey && allSquads[teamKey]) {
-                document.getElementById("teamHeading").innerText = teamKey.toUpperCase() + " 11";
+                // Heading mein asli team name dikhayega
+                document.getElementById("teamHeading").innerText = teamNameMap[teamKey] || (teamKey.toUpperCase() + " 11");
+                
                 const list = document.getElementById("playerList");
                 
-                allSquads[teamKey].forEach((p, index) => {
+                allSquads[teamKey].forEach((p) => {
                     const li = document.createElement("li");
                     li.innerText = p;
-                    // Captain ko special class dena
+                    
+                    // Agar naam mein (Captain) hai to star wala style apply karega
                     if (p.includes("(Captain)")) {
                         li.classList.add("captain-li");
                     }
                     list.appendChild(li);
                 });
             } else {
-                document.getElementById("teamHeading").innerText = "Not Found!";
+                document.getElementById("teamHeading").innerText = "Team Not Found!";
             }
         }
     </script>
