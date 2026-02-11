@@ -1,10 +1,9 @@
 // 🏏 BPL 2026 DATA
 const pointsTableData = [
-    { name: "BAPU 11",    m: 0, w: 0, l: 0, rs: 0, of: 0, rc: 0, ob: 0, form: [] },
-    { name: "BABULA 11",  m: 0, w: 0, l: 0, rs: 0, of: 0, rc: 0, ob: 0, form: [] },
-    { name: "TAPAN 11",   m: 0, w: 0, l: 0, rs: 0, of: 0, rc: 0, ob: 0, form: [] },
-    { name: "SUSANTA 11", m: 0, w: 0, l: 0, rs: 0, of: 0, rc: 0, ob: 0, form: [] },
-    { name: "RAHUL 11",   m: 0, w: 0, l: 0, rs: 0, of: 0, rc: 0, ob: 0, form: [] }
+    { name: "PITCH PIRATES",    m: 0, w: 0, l: 0, rs: 0, of: 0, rc: 0, ob: 0, form: [] },
+    { name: "ROYAL BHUTANU",   m: 0, w: 0, l: 0, rs: 0, of: 0, rc: 0, ob: 0, form: [] },
+    { name: "YOUNG STAR 11", m: 0, w: 0, l: 0, rs: 0, of: 0, rc: 0, ob: 0, form: [] },
+    { name: "GARUDA 11",   m: 0, w: 0, l: 0, rs: 0, of: 0, rc: 0, ob: 0, form: [] }
 ];
 
 function updatePointsTable() {
